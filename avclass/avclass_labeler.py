@@ -62,7 +62,7 @@ def main(args):
         ifile_l += args.lb
         ifile_are_vt = False
     if (args.vtdir): 
-        ifile_l += [os.path.join(args.vtdir, f) for f in os.listdir(args.vtdir)]
+        ifile_l += [os.path.join(args.vtdir, f) for f in os.listdir(args.vtdir) if f.endswith('json')]
         ifile_are_vt = True
     if (args.lbdir):
         ifile_l += [os.path.join(args.lbdir, f) for f in os.listdir(args.lbdir)]
