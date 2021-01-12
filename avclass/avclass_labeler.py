@@ -35,8 +35,8 @@ def guess_hash(h):
         return None
 
 def main(args):
-    # Select hash used to identify sample, by default MD5
-    hash_type = args.hash if args.hash else 'md5'
+    # Select hash used to identify sample, by default sha256
+    hash_type = args.hash if args.hash else 'sha256'
 
     # If ground truth provided, read it from file
     gt_dict = {}
