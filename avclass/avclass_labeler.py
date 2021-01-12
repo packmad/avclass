@@ -74,7 +74,7 @@ def main(args):
     elif args.vt3:
         get_sample_info = av_labels.get_sample_info_vt_v3
     else:
-        get_sample_info = av_labels.get_sample_info_vt_v2
+        get_sample_info = av_labels.get_sample_info_vt_vX
 
     # Select output prefix
     out_prefix = os.path.basename(os.path.splitext(ifile_l[0])[0])

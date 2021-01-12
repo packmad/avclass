@@ -84,6 +84,12 @@ class AvLabels:
                           vt_rep['av_labels'])
 
     @staticmethod
+    def get_sample_info_vt_vX(vt_rep):
+        if 'data' in vt_rep:
+            return AvLabels.get_sample_info_vt_v3(vt_rep)
+        return AvLabels.get_sample_info_vt_v2(vt_rep)
+
+    @staticmethod
     def get_sample_info_vt_v2(vt_rep):
         '''Parse and extract sample information from JSON line
            Returns a SampleInfo named tuple
